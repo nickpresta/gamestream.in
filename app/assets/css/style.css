@@ -1,0 +1,52 @@
+.brand i {
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+th.header {
+  cursor: pointer;
+}
+
+th.header:before, th.header:before,
+th.header:after, th.header:after {
+  content: "";
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 8px;
+  font-size: 0;
+  line-height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+th.header:after, th.header:after {
+  border-bottom: 5px solid #000;
+}
+
+th.header:before, th.header:before {
+    border-top: 5px solid #000;
+}
+
+th.header.headerSortDown:after, th.header.headerSortUp:after,
+th.header.headerSortDown:before, th.header.headerSortUp:before {
+  border: 0;
+}
+
+th.header.headerSortUp:before, th.header.headerSortDown:before {
+  margin-left: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+th.header.headerSortUp:before {
+  border-bottom: 5px solid #000;
+}
+
+th.header.headerSortDown:before {
+  border-top: 5px solid #000;
+}
+
+td {
+  vertical-align: middle !important;
+}
