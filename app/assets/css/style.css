@@ -1,3 +1,7 @@
+div#MainContent {
+  margin-top: 50px;
+}
+
 .brand i {
   vertical-align: middle;
   margin-top: -3px;
@@ -49,4 +53,20 @@ th.header.headerSortDown:before {
 
 td {
   vertical-align: middle !important;
+}
+
+.align-center {
+  text-align: center;
+}
+
+embed {
+  height: 378px;
+  width: 620px;
+}
+
+.label-own3d {
+  background-color: #f89406;
+}
+.label-twitch {
+  background-color: #6441a5;
 }
