@@ -81,5 +81,6 @@ function StreamListCtrl($scope, $http, $filter) {
   $scope.fetchErrors = 0;
   $scope.totalServices = 2;
   $scope.fetchTwitchTV();
-  $scope.fetchOwn3d();
+  // Disable for now until they support JSONP
+  // $scope.fetchOwn3d();
 }
