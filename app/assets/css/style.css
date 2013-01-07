@@ -32,22 +32,22 @@ th.header:before, th.header:before {
     border-top: 5px solid #000;
 }
 
-th.header.headerSortDown:after, th.header.headerSortUp:after,
-th.header.headerSortDown:before, th.header.headerSortUp:before {
+th.header.header-sort-desc:after, th.header.header-sort-asc:after,
+th.header.header-sort-desc:before, th.header.header-sort-asc:before {
   border: 0;
 }
 
-th.header.headerSortUp:before, th.header.headerSortDown:before {
+th.header.header-sort-asc:before, th.header.header-sort-desc:before {
   margin-left: 10px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
 
-th.header.headerSortUp:before {
+th.header.header-sort-asc:before {
   border-bottom: 5px solid #000;
 }
 
-th.header.headerSortDown:before {
+th.header.header-sort-desc:before {
   border-top: 5px solid #000;
 }
 
@@ -56,12 +56,7 @@ td {
 }
 
 .align-center {
-  text-align: center;
-}
-
-embed {
-  height: 378px;
-  width: 620px;
+  text-align: center !important;
 }
 
 .label-own3d {
@@ -69,4 +64,8 @@ embed {
 }
 .label-twitch {
   background-color: #6441a5;
+}
+
+.pager {
+  margin: 0;
 }
