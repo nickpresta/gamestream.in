@@ -1,6 +1,6 @@
 # gamestream.in
 
-A single page application built in [http://angularjs.org/](AngularJS) to display streams from [http://own3D.tv](own3D) and [http://twitch.tv](Twitch).
+A single page application built in [AngularJS](http://angularjs.org/) to display streams from [own3D](http://own3D.tv) and [Twitch](http://twitch.tv).
 
 # Live Site
 
