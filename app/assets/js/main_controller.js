@@ -22,7 +22,6 @@ function StreamListCtrl($scope, $http, $filter) {
       });
     }).error(function(data, status, headers, config) {
       $scope.fetchErrors++;
-      console.log('Error fetching own3D');
     });
   };
 
@@ -53,7 +52,6 @@ function StreamListCtrl($scope, $http, $filter) {
       });
     }).error(function (data, status, headers, config) {
       $scope.fetchErrors++;
-      console.log('Error fetching Twitch');
     });
   };
 
