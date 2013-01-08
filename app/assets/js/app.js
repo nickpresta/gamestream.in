@@ -1,4 +1,4 @@
-var app = angular.module('OnStreamApp', []);
+var app = angular.module('GameStreamApp', []);
 app.filter('beginAt', function() {
   return function(input, start, end) {
     if (end)

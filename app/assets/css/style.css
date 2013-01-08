@@ -55,10 +55,21 @@ td {
   vertical-align: middle !important;
 }
 
+td.streamer {
+  color: #999;
+}
+
+td.streamer strong {
+  color: #000;
+}
+
 .align-center {
   text-align: center !important;
 }
 
+.label-own3d, .label-twitch {
+  cursor: pointer;
+}
 .label-own3d {
   background-color: #f89406;
 }

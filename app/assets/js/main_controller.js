@@ -1,6 +1,6 @@
 function StreamListCtrl($scope, $http, $filter) {
   $scope.fetchOwn3d = function() {
-    $http.get('http://api.own3d.tv/rest/live/list.json?liveonly=1').success(function(data, status) {
+    $http.get('http://own3d.gamestream.in/api/live/list.json?liveonly=1').success(function(data, status) {
       if (status != 200) {
         return;
       }
@@ -12,14 +12,17 @@ function StreamListCtrl($scope, $http, $filter) {
       $.each(jsonData, function(index, data) {
         $scope.streams.push({
           'Game': data.game_name,
-          'Stream': data.live_description,
+          'Stream': data.live_name,
           'Streamer': data.channel_name,
           'Viewers': parseInt(data.live_viewers),
-          'url': data.link
+          'url': data.link,
+          'networkLabel': 'own3d',
+          'networkName': 'own3D'
         });
       });
     }).error(function(data, status, headers, config) {
       $scope.fetchErrors++;
+      console.log('Error fetching own3D');
     });
   };
 
@@ -43,12 +46,19 @@ function StreamListCtrl($scope, $http, $filter) {
           'Stream': data.channel.status,
           'Streamer': data.channel.display_name,
           'Viewers': data.viewers,
-          'url': data.channel.url
+          'url': data.channel.url,
+          'networkLabel': 'twitch',
+          'networkName': 'Twitch'
         });
       });
     }).error(function (data, status, headers, config) {
       $scope.fetchErrors++;
+      console.log('Error fetching Twitch');
     });
+  };
+
+  $scope.changed = function() {
+    $scope.currentPage = 0;
   };
 
   $scope.sortByHeader = function(header) {
@@ -65,8 +75,8 @@ function StreamListCtrl($scope, $http, $filter) {
 
   $scope.headers = [
     {name: 'Game', _class: 'span2 header'},
-    {name: 'Streamer', _class: 'span2 header'},
-    {name: 'Stream', _class: 'span4 header'},
+    {name: 'Streamer', _class: 'span3 header'},
+    {name: 'Stream', _class: 'span6 header'},
     {name: 'Viewers', _class: 'span1 header' }
   ];
 
@@ -75,12 +85,12 @@ function StreamListCtrl($scope, $http, $filter) {
   $scope.sortColumn = 'Viewers';
   $scope.reverse = true;
   $scope.pageSize = 25;
+  $scope.pageSizes = [10, 25, 50, 100];
   $scope.currentPage = 0;
   $scope.query = '';
 
   $scope.fetchErrors = 0;
   $scope.totalServices = 2;
   $scope.fetchTwitchTV();
-  // Disable for now until they support JSONP
-  // $scope.fetchOwn3d();
+  $scope.fetchOwn3d();
 }
