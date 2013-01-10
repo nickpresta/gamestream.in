@@ -1,10 +1,14 @@
-div#MainContent {
+#MainContent {
   margin-top: 50px;
 }
 
 .brand i {
   vertical-align: middle;
   margin-top: -3px;
+}
+
+.brand:hover i {
+  color: #333;
 }
 
 iframe {
@@ -23,44 +27,8 @@ iframe {
   cursor: pointer;
 }
 
-.header:before, .header:before,
-.header:after, .header:after {
-  content: "";
+.header i[class^="icon-"] {
   float: right;
-  width: 0;
-  height: 0;
-  margin-top: 8px;
-  font-size: 0;
-  line-height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-}
-
-.header:after, .header:after {
-  border-bottom: 5px solid #000;
-}
-
-.header:before, .header:before {
-    border-top: 5px solid #000;
-}
-
-.header.header-sort-desc:after, .header.header-sort-asc:after,
-.header.header-sort-desc:before, .header.header-sort-asc:before {
-  border: 0;
-}
-
-.header.header-sort-asc:before, .header.header-sort-desc:before {
-  margin-left: 10px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-}
-
-.header.header-sort-asc:before {
-  border-bottom: 5px solid #000;
-}
-
-.header.header-sort-desc:before {
-  border-top: 5px solid #000;
 }
 
 td {
@@ -91,4 +59,13 @@ td.streamer strong {
 
 .pager {
   margin: 0;
+}
+
+li.page-count {
+  padding: 0 1em;
+}
+
+/* Angular Specific */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
 }

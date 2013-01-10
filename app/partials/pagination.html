@@ -1,10 +1,10 @@
 <ul>
   <li ng-class="{disabled: $parent.currentPage == 0}">
-    <a ng-click="($parent.currentPage > 0) && ($parent.currentPage = $parent.currentPage - 1)">&larr; Prev</a>
+    <a ng-click="($parent.currentPage > 0) && ($parent.currentPage = $parent.currentPage - 1)"><i class="icon-arrow-left"></i> Prev</a>
   </li>
-  <li>{{ $parent.currentPage + 1 }} / {{ $parent.numberOfPages() }}</li>
+  <li class="page-count">{{ $parent.currentPage + 1 }} / {{ $parent.numberOfPages() }}</li>
   <li ng-class="{disabled: $parent.currentPage >= $parent.numberOfPages() - 1}">
-    <a ng-click="($parent.currentPage < $parent.numberOfPages() - 1) && ($parent.currentPage = currentPage + 1)">Next &rarr;</a>
+    <a ng-click="($parent.currentPage < $parent.numberOfPages() - 1) && ($parent.currentPage = currentPage + 1)">Next <i class="icon-arrow-right"></i></a>
   </li>
 </ul>
 

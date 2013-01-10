@@ -65,6 +65,14 @@ function StreamListCtrl($scope, $http, $filter) {
     $scope.reverse = !$scope.reverse;
   };
 
+  $scope.getSortClass = function(headerName) {
+    return {
+      'icon-caret-down': $scope.sortColumn == headerName && $scope.reverse,
+      'icon-caret-up': $scope.sortColumn == headerName && !$scope.reverse,
+      'icon-sort': $scope.sortColumn != headerName
+    }
+  };
+
   $scope.numberOfPages = function() {
     var filter = $filter('filter');
     var filtered = filter($scope.streams, $scope.query);
