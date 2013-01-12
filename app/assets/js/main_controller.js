@@ -82,8 +82,8 @@ function StreamListCtrl($scope, $http, $filter) {
   $scope.headers = [
     {name: 'Game', _class: 'span2 header'},
     {name: 'Streamer', _class: 'span3 header'},
-    {name: 'Stream', _class: 'span6 header'},
-    {name: 'Viewers', _class: 'span1 header' }
+    {name: 'Stream', _class: 'span5 header'},
+    {name: 'Viewers', _class: 'span2 header' }
   ];
 
   $scope.streams = [];

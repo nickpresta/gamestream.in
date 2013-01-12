@@ -99,8 +99,8 @@
               <td class="span2 game"><a ng-click="($parent.query=stream.Game) && (changed())" ng-bind="stream.Game"></a></td>
               <td class="span3 streamer"><strong ng-bind="stream.Streamer"></strong> streaming on
                 <span class="label label-{{ stream.networkLabel }}" ng-click="($parent.query=stream.networkName) && (changed())" ng-bind="stream.networkName"></span></td>
-              <td class="span6 stream"><a ng-href="{{ stream.url }}" ng-bind="stream.Stream"></a></td>
-              <td class="span1 align-center" ng-bind="stream.Viewers | number"></td>
+              <td class="span5 stream"><a ng-href="{{ stream.url }}" ng-bind="stream.Stream"></a></td>
+              <td class="span2 align-center" ng-bind="stream.Viewers | number"></td>
             </tr>
           </tbody>
           <tfoot ng-hide="query && (streams.length || (streams | filter:query).length)" ng-show="query && (!streams.length || !(streams | filter:query).length)" ng-cloak>
